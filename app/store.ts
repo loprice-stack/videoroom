@@ -3,10 +3,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import conferenceReducer  from '../app/room/conferenceSlice'
 
 
-
-
-
-
 export const store = configureStore({
   reducer: {
     conference: conferenceReducer
@@ -16,36 +12,8 @@ export const store = configureStore({
     getDefaultMiddleware({
       serializableCheck: {
         // Ignore these action types
-        ignoredActions: [
-          'conversations/setConnection',
-          'conversations/setSession',
-          'calls/setVideoCallHandle',
-          'calls/setPeerConnection',
-          'calls/setLocalStream',
-          'calls/setRemoteStream',
-          'calls/setLocalSdp',
-          'calls/setRemoteSdp'],
-        // Ignore these field paths in all actions
-        ignoredActionPaths: [
-          'conversations.setConnection',
-          'conversations.setSession',
-          'calls.setVideoCallHandle',
-          'calls.setPeerConnection',
-          'calls.setLocalStream',
-          'calls.setRemoteStream',
-          'calls.setLocalSdp',
-          'calls.setRemoteSdp'
-        ],
-        // Ignore these paths in the state
-        ignoredPaths: [
-          'conversations.setConnection',
-          'conversations.setSession',
-          'calls.setVideoCallHandle',
-          'calls.setPeerConnection',
-          'calls.setLocalStream',
-          'calls.setRemoteStream',
-          'calls.setLocalSdp',
-          'calls.setRemoteSdp'],
+        ignoredActions: [],
+       
       },
     }),
 })
